@@ -1,7 +1,10 @@
+#import color for terminal display
 from termcolor import colored
+#import calendar, time and datetime function
 import calendar
 import datetime
 import time
+#import regular expressions
 import re
 
 #get current month and year from host 
@@ -11,9 +14,8 @@ month = today.month
 currentmonth = calendar.month(year,month)
 date = today.day.__str__().rjust(2)
 rday  = ('\\b' + date + '\\b').replace('\\b ', '\\s')
-#7 Swaps foreground and background colors
+#7 Swaps foreground and background colors and print the current date
 rdayc = "\033[7m" + date + "\033[0m"
-# print the current date
 print(colored(re.sub(rday,rdayc,currentmonth),"yellow"))
 
 #define the clock function
