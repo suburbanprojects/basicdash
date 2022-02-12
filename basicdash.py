@@ -7,7 +7,6 @@ import time
 #import regular expressions
 import re
 
-
 def showcal():
     #get current month and year from host
     today = datetime.date.today()
